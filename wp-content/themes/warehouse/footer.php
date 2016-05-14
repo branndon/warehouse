@@ -31,13 +31,19 @@
 			<div class="clear"></div>
 
 			<div class="copyright">
-				<p>© Ware House, <?php echo date( 'Y' ); ?>. All rights reserved. Design by Evelise</p>
+				<p>© Warehouse, <?php echo date( 'Y' ); ?>. All rights reserved. Design by Evelise</p>
 			</div>
 		</div>
 	</footer>
 
 	<!-- jQuery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<!-- Plugins -->
+	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/sweetalert.min.js"></script>
+	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/parallax.min.js"></script>
+
+	<!-- Main theme -->
 	<script src="<?php bloginfo( 'template_directory' ); ?>/assets/js/functions.js"></script>
 
 	<?php wp_footer(); ?>

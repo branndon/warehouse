@@ -1,4 +1,6 @@
-/* Geral */
+/*---------------------*\
+	Geral
+\*---------------------*/
 	.clear{
 		clear: both;
 	}
@@ -48,50 +50,94 @@
 		display: block;
 		min-height: 1500px;
 	}
-/* Header */
-#header{
-	min-height: 150px;
-	background: #1d1d1d;
-	border-bottom: 3px solid #ff5d00;
-}
 
-/* Logo */
-#logo{
-	margin-top: 25px;
-}
+/*---------------------*\
+	Header
+\*---------------------*/
+	#header{
+		min-height: 150px;
+		background: #1d1d1d;
+		border-bottom: 3px solid #ff5d00;
+	}
 
-/* Menu */
-#menu{
-	float: right;
-	margin-top: 70px;
-	font-family: 'Open Sans', sans-serif;
-}
-	#menu ul{}
-	#menu ul li{
+/*---------------------*\
+	Logo
+\*---------------------*/
+	#logo{
+		margin-top: 25px;
+	}
+
+/*---------------------*\
+	Menu
+\*---------------------*/
+	#menu{
+		float: right;
+		margin-top: 70px;
+		font-family: 'Open Sans', sans-serif;
+	}
+	ul#menu{}
+	ul#menu li{
 		float: left;
 		display: block;
 		text-decoration: none;
 		border: 1px solid #1d1d1d;
 	}
-	#menu ul li:hover{
+	ul#menu li:hover,
+	ul#menu li.current-menu-item{
 		border: 1px solid #ff5d00;
 	}
-	#menu ul li a{
+	ul#menu li a{
 		display: block;
 		color: #FFFFFF;
 		padding: 10px 15px;
 	}
-	#menu ul li a:hover{
+	ul#menu li a:hover{
 		text-decoration: none;
 	}
 
+/*---------------------*\
+	Menu lateral
+\*---------------------*/
+	#menuLateral{
+		font-family: 'Open Sans', sans-serif;
+		position: fixed;
+		top: 100px;
+		left: 50px;
+		border: 2px solid #ff5d00;
+		z-index: 9999;
+		background: #1d1d1d;
+		display: none;
+	}
+	#menuLateral ul{
+		margin: 0;
+		padding: 0;
+	}
+	#menuLateral ul li{
+		display: block;
+		width: 100%;
+		text-decoration: none;
+	}
+	#menuLateral ul li:hover{
+		background: #ff5d00;
+	}
+	#menuLateral ul li a{
+		display: block;
+		color: #FFFFFF;
+		padding: 20px;
+		font-size: 20px;
+	}
+	#menuLateral ul li a:hover{
+		text-decoration: none;
+	}
 
-	/* Sections - Default */
+/*---------------------*\
+	Sections - Default
+\*---------------------*/
 	.content-section{
 		height: auto;
 		min-height: 550px;
 		height: auto;
-		background: #ddd;
+		/*background: #ddd;*/
 	}
 
 	.center{
@@ -137,9 +183,11 @@
 		display: inline-block;
 	}
 
-	/* Section - Principal */
+/*---------------------*\
+	Section - Principal
+\*---------------------*/
 	.main-section{
-		background: url(../images/main-bg.jpg) no-repeat center top;
+		/*background: url(../images/main-bg.jpg) no-repeat center top;*/
 		width: 100%;
 		border-bottom: 7px solid #ff5d00;
 		background-size: 100% auto;
@@ -179,9 +227,11 @@
 			padding: 10px 30px;
 		}
 
-	/* Section - Quem Somos */
+/*---------------------*\
+	Section - Quem Somos
+\*---------------------*/
 	.quemSomos-section{
-		background: url(../images/quem-somos-bg.jpg) no-repeat center top #262626;
+		/*background: url(../images/quem-somos-bg.jpg) no-repeat center top #262626;*/
 		width: 100%;
 		height: 550px;
 		background-size: 100% auto;
@@ -199,7 +249,10 @@
 		font-size: 18px;
 	}
 
-	/* Section - Equipe */
+
+/*---------------------*\
+	Section - Equipe
+\*---------------------*/
 	.equipe-section{
 		background: #1d1d1d;
 		height: 100%;
@@ -256,10 +309,11 @@
 			margin-left: 0;
 		}
 
-
-	/* Section - Produções */
+/*---------------------*\
+	Section - Produções
+\*---------------------*/
 	.producoes-section{
-		background: url(../images/producoes-bg.jpg) no-repeat center top #262626;
+		/*background: url(../images/producoes-bg.jpg) no-repeat center top #262626;*/
 		width: 100%;
 		height: 965px;
 		border-bottom: 3px solid #ff5d00;
@@ -277,7 +331,9 @@
 		height: 120px;
 	}
 
-	/* Section - Maps */
+/*---------------------*\
+	Section - Maps
+\*---------------------*/
 	.maps-section{
 		/*background: url(../images/teste-maps.jpg) no-repeat center top;*/
 		width: 100%;
@@ -288,7 +344,9 @@
 	.maps-section .container{}
 
 
-	/* Footer */
+/*---------------------*\
+	Footer
+\*---------------------*/
 	#footer{
 		background: #1d1d1d;
 		min-height: 180px;
@@ -310,6 +368,9 @@
 		color: #758594;
 		font-family: 'Open Sans', sans-serif;
 		margin-bottom: 10px;
+	}
+	#footer .infos p a{
+		color: #758594;
 	}
 	#footer .infos p i{
 		color: #FFFFFF;
@@ -345,9 +406,9 @@
 	}
 
 
-/*-------------------------------
-EFEITOS
----------------------------------*/
+/*---------------------*\
+	Efeitos
+\*---------------------*/
 
 	/* Sweep To Top */
 	.sweep-top-red {
@@ -461,25 +522,105 @@ EFEITOS
 		transform: scale(0.95);
 	}
 
-/*-------------------------------
-Page Template
----------------------------------*/
-body.page{}
-body.page main{
-	background: #FFFFFF;
-}
-
-
-/*-------------------------------
-Media Queries
----------------------------------*/
-@media screen and ( max-width: 1570px ) {
-	.main-section,
-	.quemSomos-section,
-	.producoes-section{
-		background-size: auto 100%;
+/*---------------------*\
+	Page: Template
+\*---------------------*/
+	body.page{}
+	body.page main#content{
+		background: #FFFFFF;
+		min-height: 600px;
+		padding: 40px 0;
 	}
-}
+	body.page main#content .content-tit h1{
+		text-align: center;
+		color: #1d1d1d;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 0px;
+	}
+	body.page main#content .content-tit h1 span{
+		color: #ff5d00;
+	}
+	body.page main#content .content-tit p{
+		text-align: center;
+		font-size: 13px;
+		margin-bottom: 40px;
+	}
+
+/*---------------------*\
+	Page: 404
+\*---------------------*/
+body.error404{}
+	
+	/* content */
+	body.error404 #content{
+		padding: 40px 0;
+		min-height: 500px;
+	}
+
+/*---------------------*\
+	Page: Contato
+\*---------------------*/
+	body.page-template-page-template-contato{}
+	body.page-template-page-template-contato main#content{
+		background: #FFFFFF;
+		min-height: 1000px;
+		padding-top: 0;
+	}
+
+	/* Maps */
+	body.page-template-page-template-contato .content-map{
+		/*border-bottom: 2px solid #ff5d00;*/
+		background: #ddd;
+		min-height: 300px;
+		max-height: 300px;
+	}
+
+	body.page-template-page-template-contato .content-map iframe{
+		pointer-events: none;
+	}
+
+	/* Infos */
+	body.page-template-page-template-contato .infos-contact{
+		font-size: 18px;
+	}
+	body.page-template-page-template-contato .infos-contact a{
+		color: #ff5d00;
+	}
+
+	/* Formuliário */
+	body.page-template-page-template-contato form{}
+	body.page-template-page-template-contato form .content-fields{
+		margin: 20px 0;
+	}
+	body.page-template-page-template-contato form .content-fields:first-of-type{
+		margin: 0;
+	}
+	body.page-template-page-template-contato form textarea{
+		min-height: 100px;
+	}
+	body.page-template-page-template-contato form input[type='submit']{
+		display: block;
+		background: #ff5d00;
+		padding: 20px 10px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		border-radius: 10px;
+	}
+	body.page-template-page-template-contato form input[type='submit']:hover{
+		background: #FB772C;
+	}
+
+/*---------------------*\
+	Media Queries
+\*---------------------*/
+	@media screen and ( max-width: 1570px ) {
+		.main-section,
+		.quemSomos-section,
+		.producoes-section{
+			background-size: auto 100%;
+		}
+	}
 
 
 

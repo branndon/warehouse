@@ -12,19 +12,18 @@
 
 get_header(); ?>
 
-	<main id="content" class="<?php echo odin_classes_page_full(); ?>" tabindex="-1" role="main">
+	<main id="content">
 		<div class="container">
 			<?php
-				// Start the Loop.
 				while ( have_posts() ) : the_post();
 
-					// Include the page content template.
-					get_template_part( 'content', 'page' );
+					// title
+					echo '<div class="content-tit">';
+						echo '<h1>' . get_the_title() . '</h1>';
+					echo '</div>';
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+					// content
+					the_content();
 				endwhile;
 			?>
 		</div>

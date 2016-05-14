@@ -27,6 +27,7 @@
 
 	<!-- CSS - Default -->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/css/warehouse.css" type="text/css" />
+	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/css/sweetalert.css" type="text/css" />
 
 	<?php wp_head(); ?>
 </head>
@@ -40,35 +41,41 @@
 
 	<header id="header">
 		<div class="container">
-		<div id="logo" class="col-md-2">
-			<?php if (is_home()) : ?>
-				<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/logo.png" title="Warehouse - Gravação, Mix & master" alt="" />
-			<?php else : ?>
-				<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>" class="shrink">
-					<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/logo.png" title="Warehouse - Gravação, Mix & master" alt="" />
-				</a>
-			<?php endif; ?>
-		</div>
 
-		<div id="menu" class="col-md-6">
-			<ul>
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<a href="#">Quem Somos</a>
-				</li>
-				<li>
-					<a href="#">Equipe</a>
-				</li>
-				<li>
-					<a href="#">Produções</a>
-				</li>
-				<li>
-					<a href="#">Contato</a>
-				</li>
-			</ul>
-		</div>
+			<!-- logo -->
+			<div id="logo" class="col-md-2">
+				<?php if (is_home()) : ?>
+					<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/logo.png" title="Warehouse - Gravação, Mix & master" alt="" />
+				<?php else : ?>
+					<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>" class="shrink">
+						<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/logo.png" title="Warehouse - Gravação, Mix & master" alt="" />
+					</a>
+				<?php endif; ?>
+			</div>
+
+			<!-- menu -->
+			<!-- <div id="menu" class="col-md-6">
+				<ul>
+					<li>
+						<a href="#home">Home</a>
+					</li>
+					<li>
+						<a href="#quemSomos">Quem Somos</a>
+					</li>
+					<li>
+						<a href="#equipe">Equipe</a>
+					</li>
+					<li>
+						<a href="#producoes">Produções</a>
+					</li>
+					<li>
+						<a href="#">Contato</a>
+					</li>
+				</ul>
+			</div> -->
+
+			<?php wp_nav_menu( array( 'menu' => 'Menu principal', 'menu_class' => 'col-md-6', 'menu_id' => 'menu' ) ); ?>
+
 		</div>
 	</header>
 
